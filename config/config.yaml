@@ -1,0 +1,13 @@
+model:
+  name_or_path: "decapoda-research/llama-7b-hf"
+  quantization: false
+
+training:
+  dataset_path: "data/processed/train.jsonl"
+  output_dir: "outputs/"
+  num_train_epochs: 3
+  per_device_train_batch_size: 1
+  learning_rate: 2e-4
+  optim: "adamw"
+  scheduler_type: "cosine"
+  logging_steps: 10
